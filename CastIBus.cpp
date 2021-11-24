@@ -1,6 +1,6 @@
 #include <Arduino.h>
 #include "CastIBus.h"
-#include <CustomSoftwareSerial.h>
+#include "CustomSoftwareSerial.h"
 SIBus IBus;
 void SIBus::begin(CustomSoftwareSerial& serial)
 {
