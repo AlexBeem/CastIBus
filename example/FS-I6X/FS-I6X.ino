@@ -1,6 +1,6 @@
-#include <CustomSoftwareSerial.h>             // SoftIBus library
+#include <CastIBus.h>                 // SoftIBus library
 CustomSoftwareSerial IBuspin(8, 9);   // "serial" port on which we will be running the IBus connection. 
-                                  // Since to read values we only need the Rx, just connect pin D14 and leave D15 open
+                                      // Since to read values we only need the Rx, just connect pin D8 and leave D9 open
 
 // *** ВАЖНО!!! *** ЧИТАТЬ ВНИМАТЕЛЬНО!!! ***
 // Так как библиоткека iBUSTelemetry.h использует прерывание PCINT0 во избежание конфликта
@@ -12,7 +12,7 @@ CustomSoftwareSerial IBuspin(8, 9);   // "serial" port on which we will be runni
     A0 .. A5  - генерируют запрос прерывания PCINT1
     D0 .. D7  - генерируют запрос прерывания PCINT2
 */
-int ch = 14;                      // число каналов радиоаппаратуры RC
+int ch = 14;                            // число каналов радиоаппаратуры RC
 
 void setup()
 {
