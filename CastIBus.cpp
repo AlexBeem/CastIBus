@@ -1,8 +1,8 @@
 #include <Arduino.h>
-#include "SoftIBus.h"
-#include "SoftwareSerial.h"
+#include "CastIBus.h"
+#include <CustomSoftwareSerial.h>
 SIBus IBus;
-void SIBus::begin(SoftwareSerial& serial)
+void SIBus::begin(CustomSoftwareSerial& serial)
 {
   begin((Stream&)serial);
 }
