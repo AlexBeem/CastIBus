@@ -1,5 +1,5 @@
 #include <CustomSoftwareSerial.h>             // SoftIBus library
-CustomSoftwareSerial IBuspin(8, 9,);   // "serial" port on which we will be running the IBus connection. 
+CustomSoftwareSerial IBuspin(8, 9);   // "serial" port on which we will be running the IBus connection. 
                                   // Since to read values we only need the Rx, just connect pin D14 and leave D15 open
 
 // *** ВАЖНО!!! *** ЧИТАТЬ ВНИМАТЕЛЬНО!!! ***
@@ -16,9 +16,9 @@ int ch = 14;                      // число каналов радиоапп�
 
 void setup()
 {
-  IBuspin.begin(115200);//the softserial port has to begin at this baud prior to starting it as the IBus port
-  Serial.begin(115200);//hardserial for debigging
-  IBus.begin(IBuspin);//start the IBus object
+  IBuspin.begin(115200,  CSERIAL_8N1);  //  the softserial port has to begin at this baud prior to starting it as the IBus port
+  Serial.begin(115200);                 //  hardserial for debigging
+  IBus.begin(IBuspin);                  //  start the IBus object
 }
 
 void loop()
