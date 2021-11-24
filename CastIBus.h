@@ -1,5 +1,5 @@
 #include <inttypes.h>
-#include <CustomSoftwareSerial.h>
+#include "CustomSoftwareSerial.h"
 class CustomSoftwareSerial;
 class Stream;
 
