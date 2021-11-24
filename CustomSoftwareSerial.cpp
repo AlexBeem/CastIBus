@@ -41,7 +41,7 @@ http://arduiniana.org.
 #include <avr/interrupt.h>
 #include <avr/pgmspace.h>
 #include <Arduino.h>
-#include <CustomSoftwareSerial.h>
+#include "CustomSoftwareSerial.h"
 #include <math.h>
 //
 // Lookup table
