@@ -1,12 +1,12 @@
 #include <inttypes.h>
-#include <SoftwareSerial.h>
-class SoftwareSerial;
+#include <CustomSoftwareSerial.h>
+class CustomSoftwareSerial;
 class Stream;
 
 class SIBus
 {
 public:
-  void begin(SoftwareSerial& serial);
+  void begin(CustomSoftwareSerial& serial);
   void begin(Stream& stream);
   void loop(void);
   uint16_t readChannel(uint8_t channelNr);
