@@ -1,20 +1,18 @@
 #include "CustomSoftwareSerial.h"
-
 #define P_RX 2                        // Reception PIN (SoftSerial)
-#define P_TX 1                        // Transmition PIN (SoftSerial)
+#define P_TX 5                        // Transmition PIN (SoftSerial)
 
-SoftSerial Bluetooth(P_RX, P_TX);           // Software serial port for control the Bluetooth module
+SoftSerial iBUS(P_RX, P_TX);     // Software serial port for control the Bluetooth module
 
 void setup()
 {
-    Bluetooth.begin(9600); // Initialize the serial port
+  iBUS.begin(115200); // Initialize the serial port
+  Serial.begin(115200);
 }
 
 void loop()
 {
     // Basic Echo Test
-    if(Bluetooth.available())
-        Bluetooth.write(Bluetooth.read());
-
-    delay(100);
+    if(iBUS.available())
+    Serial.write(iBUS.read());
 }
