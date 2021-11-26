@@ -1,6 +1,6 @@
 #include "CustomSoftwareSerial.h"
-#define P_RX 2                         // Reception PIN (SoftSerial)
-#define P_TX 5                         // Transmition PIN (SoftSerial)
+#define P_RX 8                         // Reception PIN (SoftSerial)
+#define P_TX 9                         // Transmition PIN (SoftSerial)
 
 CustomSoftwareSerial iBUS(P_RX, P_TX); // Software serial port for control the Bluetooth module
 
